@@ -189,6 +189,7 @@ typedef struct _json_value
             return *u.array.values [index];
          }
 
+         #if 0
          inline const struct _json_value &operator [] (const char * index) const
          { 
             if (type != json_object)
@@ -212,6 +213,7 @@ typedef struct _json_value
                   return "";
             };
          }
+         #endif
 
          inline operator json_int_t () const
          {  
